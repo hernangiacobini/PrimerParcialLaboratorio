@@ -116,3 +116,18 @@ int inicializar_clientes(tbl_cliente* clientes, int tope)
     }
     return retorno;
 }
+
+
+int buscaCliente(tbl_cliente* clientes, int tope, int idCliente)
+{
+    int i;
+
+    for(i=0;i<tope;i++)
+    {
+        if(clientes[i].idCliente==idCliente)
+        {
+            return idCliente;
+        }
+    }
+    return 0;
+}

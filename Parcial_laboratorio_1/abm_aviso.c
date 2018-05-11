@@ -17,34 +17,32 @@ int alta_aviso(tbl_aviso* avisos, int topeA, tbl_cliente* clientes, int topeC, i
     char auxtexto[64];
     int retorno=-1;
 
-    for(i=0;i<topeC;i++)
+    if(buscaCliente(clientes,topeC,auxIdCliente)>=0)
     {
-        if(clientes[i].idCliente==auxIdCliente)
+        for(i=0;i<topeA;i++)
         {
-            for(i=0;i<topeA;i++)
+            if(avisos[i].isEmpty==1)
             {
-                if(avisos[i].isEmpty==1)
+                if(getValidInt("\nEscriba el rubro:\n","No valido",&auxRubro,1,5,99)==0)
                 {
-                    if(getValidInt("\nEscriba el rubro:\n","No valido",&auxRubro,1,5,99)==0)
+                    avisos[i].rubro=auxRubro;
+                    if(getValidString("\nEscriba el texto del aviso:\n","No valido","Debe ingresar un maximo de 64 caracteres",auxtexto,64,3)==0)
                     {
-                        avisos[i].rubro=auxRubro;
-                        if(getValidString("\nEscriba el texto del aviso:\n","No valido","Debe ingresar un maximo de 64 caracteres",auxtexto,64,3)==0)
-                        {
-                            strcpy(avisos[i].texto,auxtexto);
-                            auxID=proximoId();
-                            avisos[i].idAviso=auxID;
-                            avisos[i].isEmpty=0;
-                            break;
-                        }
+                        strcpy(avisos[i].texto,auxtexto);
+                        auxID=proximoId();
+                        avisos[i].idAviso=auxID;
+                        avisos[i].idCliente=auxIdCliente;
+                        avisos[i].isEmpty=0;
+                        retorno= 0;
+                        break;
                     }
                 }
             }
-        retorno= 0;
         }
-        else
-        {
-            printf("El cliente no esta registrado");
-        }
+    }
+    else
+    {
+        printf("El cliente no esta registrado");
     }
     return retorno;
 }
@@ -85,3 +83,6 @@ int inicializar_avisos(tbl_aviso* avisos, int tope)
     }
     return retorno;
 }
+
+
+

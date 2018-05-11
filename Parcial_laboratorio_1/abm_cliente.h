@@ -19,5 +19,6 @@ int inicializar_clientes(tbl_cliente* clientes, int tope);
 int alta_cliente(tbl_cliente* clientes, int tope);
 int modifica_cliente(tbl_cliente* clientes, int tope, int auxIdCli);
 int baja_cliente(tbl_cliente* clientes, int tope, int auxIdCli);
+int buscaCliente(tbl_cliente* clientes, int tope, int idCliente);
 
 int proximoIdCliente(void);

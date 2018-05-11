@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1525997848 source:d:\giacobini\parcial_laboratorio_1\abm_aviso.c
+1526000374 source:d:\giacobini\parcial_laboratorio_1\abm_aviso.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -12,9 +12,9 @@
 1525998001 d:\giacobini\parcial_laboratorio_1\abm_aviso.h
 	"abm_cliente.h"
 
-1525997711 d:\giacobini\parcial_laboratorio_1\abm_cliente.h
+1526000409 d:\giacobini\parcial_laboratorio_1\abm_cliente.h
 
-1525997912 source:d:\giacobini\parcial_laboratorio_1\abm_cliente.c
+1526000126 source:d:\giacobini\parcial_laboratorio_1\abm_cliente.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -22,7 +22,7 @@
 	"abm_aviso.h"
 	"abm_cliente.h"
 
-1525997977 source:d:\giacobini\parcial_laboratorio_1\main.c
+1525998090 source:d:\giacobini\parcial_laboratorio_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
